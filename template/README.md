@@ -6,12 +6,12 @@
 
 [${title}] lets you ${desc} in HTML.
 
-```pcss
-.example { ... }
+```html
+<example/>
 
-/* becomes */
+<!-- becomes -->
 
-.example { ... }
+<example/>
 ```
 
 ## Usage
@@ -19,13 +19,13 @@
 Add [${title}] to your project:
 
 ```bash
-npm install ${id} --save-dev
+npm install ${npmId} --save-dev
 ```
 
 Use [${title}] to process your HTML:
 
 ```js
-const ${idCamelCase} = require('${id}');
+const ${idCamelCase} = require('${npmId}');
 
 ${idCamelCase}.process(YOUR_HTML /*, processOptions, pluginOptions */);
 ```
@@ -34,7 +34,7 @@ Or use it as a [pHTML] plugin:
 
 ```js
 const phtml = require('phtml');
-const ${idCamelCase} = require('${id}');
+const ${idCamelCase} = require('${npmId}');
 
 phtml([
   ${idCamelCase}(/* pluginOptions */)
@@ -43,7 +43,7 @@ phtml([
 
 [${title}] runs in all Node environments, with special instructions for:
 
-| [Node](INSTALL.md#node) | [Webpack](INSTALL.md#webpack) | [Create React App](INSTALL.md#create-react-app) | [Gulp](INSTALL.md#gulp) | [Grunt](INSTALL.md#grunt) |
+| [Node](INSTALL.md#node) | [pHTML CLI](INSTALL.md#phtml-cli) | [Webpack](INSTALL.md#webpack) | [Create React App](INSTALL.md#create-react-app) | [Gulp](INSTALL.md#gulp) | [Grunt](INSTALL.md#grunt) |
 | --- | --- | --- | --- | --- | --- |
 
 ## Options
@@ -54,8 +54,8 @@ phtml([
 [cli-url]: https://travis-ci.org/${user}/${id}
 [git-img]: https://img.shields.io/badge/support-chat-blue.svg
 [git-url]: https://gitter.im/phtmlorg/phtml
-[npm-img]: https://img.shields.io/npm/v/${id}.svg
-[npm-url]: https://www.npmjs.com/package/${id}
+[npm-img]: https://img.shields.io/npm/v/${npmId}.svg
+[npm-url]: https://www.npmjs.com/package/${npmId}
 
 [pHTML]: https://github.com/phtmlorg/phtml
 [${title}]: https://github.com/${user}/${id}

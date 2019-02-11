@@ -1,5 +1,5 @@
 {
-  "name": "${id}",
+  "name": "${npmId}",
   "version": "1.0.0",
   "description": "${pkgdesc} in HTML",
   "author": "${author} <${email}>",

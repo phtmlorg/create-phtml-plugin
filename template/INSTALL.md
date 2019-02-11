@@ -10,13 +10,13 @@
 Add [${title}] to your project:
 
 ```bash
-npm install ${id} --save-dev
+npm install ${npmId} --save-dev
 ```
 
 Use [${title}] to process your HTML:
 
 ```js
-const ${idCamelCase} = require('${id}');
+const ${idCamelCase} = require('${npmId}');
 
 ${idCamelCase}.process(YOUR_HTML /*, processOptions, pluginOptions */);
 ```
@@ -25,7 +25,7 @@ Or use it as a [pHTML] plugin:
 
 ```js
 const phtml = require('phtml');
-const ${idCamelCase} = require('${id}');
+const ${idCamelCase} = require('${npmId}');
 
 phtml([
   ${idCamelCase}(/* pluginOptions */)
@@ -43,7 +43,7 @@ npm install phtml-cli --save-dev
 Use [${title}] in your `phtml.config.js` configuration file:
 
 ```js
-const ${idCamelCase} = require('${id}');
+const ${idCamelCase} = require('${npmId}');
 
 module.exports = {
   plugins: [
@@ -63,7 +63,7 @@ npm install phtml-loader --save-dev
 Use [${title}] in your Webpack configuration:
 
 ```js
-const ${idCamelCase} = require('${id}');
+const ${idCamelCase} = require('${npmId}');
 
 module.exports = {
   module: {
@@ -99,7 +99,7 @@ Use [React App Rewire pHTML] and [${title}] in your
 
 ```js
 const reactAppRewirePHTML = require('react-app-rewire-phtml');
-const ${idCamelCase} = require('${id}');
+const ${idCamelCase} = require('${npmId}');
 
 module.exports = config => reactAppRewirePHTML(config, {
   plugins: () => [
@@ -120,7 +120,7 @@ Use [${title}] in your Gulpfile:
 
 ```js
 const phtml = require('gulp-phtml');
-const ${idCamelCase} = require('${id}');
+const ${idCamelCase} = require('${npmId}');
 
 gulp.task('html', () => gulp.src('./src/*.html').pipe(
   phtml([
@@ -142,7 +142,7 @@ npm install grunt-phtml --save-dev
 Use [${title}] in your Gruntfile:
 
 ```js
-const ${idCamelCase} = require('${id}');
+const ${idCamelCase} = require('${npmId}');
 
 grunt.loadNpmTasks('grunt-phtml');
 
