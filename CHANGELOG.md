@@ -1,5 +1,9 @@
 # Changes to Create pHTML Plugin
 
+### 1.1.2 (February 11, 2018)
+
+- Fixed: `npm` or `npm-id` is no longer stripped of special characters
+
 ### 1.1.1 (February 11, 2018)
 
 - Fixed: `npm` or `npm-id` is no longer camel-cased
