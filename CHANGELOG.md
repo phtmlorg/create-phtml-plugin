@@ -1,5 +1,9 @@
 # Changes to Create pHTML Plugin
 
+### 1.1.3 (February 11, 2018)
+
+- Updated: rollup configuration is loose with entry built-ins
+
 ### 1.1.2 (February 11, 2018)
 
 - Fixed: `npm` or `npm-id` is no longer stripped of special characters
