@@ -1,5 +1,11 @@
 # Changes to Create pHTML Plugin
 
+### 1.1.1 (February 11, 2018)
+
+- Fixed: `npm` or `npm-id` is no longer camel-cased
+- Updated: `phtml` to 1.1.4 (patch)
+- Updated: `phtml-tape` to 1.1.1 (minor, patch for this project)
+
 ### 1.1.0 (February 10, 2018)
 
 - Added: `npm` or `npm-id` argument for specifying the npm package id

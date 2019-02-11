@@ -40,7 +40,7 @@ async function updateArgs() {
 	// --id, prompt, or fallback
 	args.id = formatId(args.id || args.title);
 	args.idCamelCase = formatCamelCase(args['camel-case-id'] || args.id);
-	args.npmId = formatCamelCase(args['npm-id'] || args['npm'] || args.id);
+	args.npmId = formatId(args['npm-id'] || args['npm'] || args.id);
 
 	// --desc or fallback
 	if (!args.desc) {
