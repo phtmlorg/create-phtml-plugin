@@ -1,5 +1,9 @@
 # Changes to Create pHTML Plugin
 
+### 1.1.4 (February 12, 2018)
+
+- Updated: `phtml` to 1.1.5 (patch)
+
 ### 1.1.3 (February 11, 2018)
 
 - Updated: rollup configuration is loose with entry built-ins

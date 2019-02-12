@@ -29,7 +29,7 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "phtml": "^1.1.4"
+    "phtml": "^1.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
