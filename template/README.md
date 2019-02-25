@@ -16,6 +16,14 @@
 
 ## Usage
 
+Transform HTML files directly from the command line:
+
+```bash
+npx phtml source.html output.html -p ${npmId}
+```
+
+### Node
+
 Add [${title}] to your project:
 
 ```bash
