@@ -1,8 +1,13 @@
 # Changes to Create pHTML Plugin
 
+### 3.0.0 (March 16, 2019)
+
+- Updated: `phtml` to 3.0.0 (major)
+- Updated: `phtml-tape` to 3.0.0 (major)
+
 ### 2.0.2 (February 24, 2018)
 
-- Updated: `phtml` to v2.0.2
+- Updated: `phtml` to 2.0.2 (patch)
 - Updated: CLI Instructions
 
 ### 2.0.1 (February 18, 2018)
