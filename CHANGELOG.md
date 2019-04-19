@@ -1,5 +1,9 @@
 # Changes to Create pHTML Plugin
 
+### 3.1.0 (April 19, 2019)
+
+- Updated: `pthml` to 3.1.0 (minor)
+
 ### 3.0.0 (March 16, 2019)
 
 - Updated: `phtml` to 3.0.0 (major)
