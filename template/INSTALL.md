@@ -2,8 +2,8 @@
 
 [${title}] runs in all Node environments, with special instructions for:
 
-| [Node](#node) | [pHTML CLI](#phtml-cli) | [Webpack](#webpack) | [Create React App](#create-react-app) | [Gulp](#gulp) | [Grunt](#grunt) |
-| --- | --- | --- | --- | --- | --- |
+| [Node](#node) | [CLI](#phtml-cli) | [Eleventy](#eleventy) | [Gulp](#gulp) | [Grunt](#grunt) |
+| --- | --- | --- | --- | --- |
 
 ## Node
 
@@ -16,119 +16,89 @@ npm install ${npmId} --save-dev
 Use [${title}] to process your HTML:
 
 ```js
-const ${idCamelCase} = require('${npmId}');
+const ${idCamelCase} = require('${npmId}')
 
-${idCamelCase}.process(YOUR_HTML /*, processOptions, pluginOptions */);
+${idCamelCase}.process(YOUR_HTML /*, processOptions, pluginOptions */)
 ```
 
 Or use it as a [pHTML] plugin:
 
 ```js
-const phtml = require('phtml');
-const ${idCamelCase} = require('${npmId}');
+const phtml = require('phtml')
+const ${idCamelCase} = require('${npmId}')
 
 phtml([
   ${idCamelCase}(/* pluginOptions */)
-]).process(YOUR_HTML /*, processOptions */);
+]).process(YOUR_HTML /*, processOptions */)
 ```
 
-## pHTML CLI
+## CLI
 
-Add [pHTML CLI] to your project:
+Transform HTML files directly from the command line:
 
 ```bash
-npm install phtml-cli --save-dev
+npx phtml source.html output.html -p ${npmId}
 ```
 
-Use [${title}] in your `phtml.config.js` configuration file:
+Alternatively, add [${title}] to your `phtml.config.js` configuration file:
 
 ```js
-const ${idCamelCase} = require('${npmId}');
-
 module.exports = {
   plugins: [
-    ${idCamelCase}(/* pluginOptions */)
+    ['${npmId}', /* pluginOptions */]
   ]
 }
 ```
 
-## Webpack
+## Eleventy
 
-Add [pHTML Loader] to your project:
+Add [pHTML Eleventy] and [${title}] to your Eleventy project:
 
-```bash
-npm install phtml-loader --save-dev
+```sh
+npm install ${npmId} @phtml/11ty --save-dev
 ```
 
-Use [${title}] in your Webpack configuration:
+Use [pHTML Eleventy] and [${title}] in your Eleventy configuration:
 
 ```js
-const ${idCamelCase} = require('${npmId}');
+const phtml11ty = require('@phtml/11ty')
+const ${idCamelCase} = require('${npmId}')
 
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.html$/,
-        use: [
-          'style-loader',
-          { loader: 'html-loader', options: { importLoaders: 1 } },
-          { loader: 'phtml-loader', options: {
-            ident: 'phtml',
-            plugins: () => [
-              ${idCamelCase}(/* pluginOptions */)
-            ]
-          } }
-        ]
-      }
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(phtml11ty, {
+    use: [
+      ${idCamelCase}(/* pluginOptions */)
     ]
-  }
+  })
 }
-```
-
-## Create React App
-
-Add [React App Rewired] and [React App Rewire pHTML] to your project:
-
-```bash
-npm install react-app-rewired react-app-rewire-html --save-dev
-```
-
-Use [React App Rewire pHTML] and [${title}] in your
-`config-overrides.js` file:
-
-```js
-const reactAppRewirePHTML = require('react-app-rewire-phtml');
-const ${idCamelCase} = require('${npmId}');
-
-module.exports = config => reactAppRewirePHTML(config, {
-  plugins: () => [
-    ${idCamelCase}(/* pluginOptions */)
-  ]
-});
 ```
 
 ## Gulp
 
-Add [Gulp pHTML] to your project:
+Add [Gulp pHTML] and [${title}] to your project:
 
 ```bash
-npm install gulp-phtml --save-dev
+npm install ${npmId} gulp-phtml --save-dev
 ```
 
-Use [${title}] in your Gulpfile:
+Use [Gulp pHTML] and [${title}] in your Gulpfile:
 
 ```js
-const phtml = require('gulp-phtml');
-const ${idCamelCase} = require('${npmId}');
+const gulp = require('gulp')
+const gulpPhtml = require('gulp-phtml')
+const ${idCamelCase} = require('${npmId}')
 
-gulp.task('html', () => gulp.src('./src/*.html').pipe(
-  phtml([
-    ${idCamelCase}(/* pluginOptions */)
-  ])
-).pipe(
-  gulp.dest('.')
-));
+gulp.task('html',
+  () => gulp.src('./src/*.html').pipe(
+    gulpPhtml({
+      plugins: [
+        ${idCamelCase}(/* pluginOptions */)
+      ]
+    })
+  ).pipe(
+    gulp.dest('dist')
+  )
+)
 ```
 
 ## Grunt
@@ -139,32 +109,33 @@ Add [Grunt pHTML] to your project:
 npm install grunt-phtml --save-dev
 ```
 
-Use [${title}] in your Gruntfile:
+Use [Grunt pHTML] and [${title}] in your Gruntfile:
 
 ```js
-const ${idCamelCase} = require('${npmId}');
+const ${idCamelCase} = require('${npmId}')
 
-grunt.loadNpmTasks('grunt-phtml');
+grunt.loadNpmTasks('grunt-phtml')
 
 grunt.initConfig({
   phtml: {
     options: {
-      use: [
-       ${idCamelCase}(/* pluginOptions */)
+      plugins: [
+        ${idCamelCase}(/* pluginOptions */)
       ]
     },
     dist: {
-      src: '*.html'
+      files: [{
+        expand: true,
+        src: 'src/*.html',
+        dest: 'dest'
+      }]
     }
   }
-});
+})
 ```
 
 [Gulp pHTML]: https://github.com/phtmlorg/gulp-phtml
 [Grunt pHTML]: https://github.com/phtmlorg/grunt-phtml
 [pHTML]: https://github.com/phtmlorg/phtml
-[pHTML CLI]: https://github.com/phtmlorg/phtml-cli
-[pHTML Loader]: https://github.com/phtmlorg/phtml-loader
+[pHTML Eleventy]: https://github.com/phtmlorg/phtml-11ty
 [${title}]: https://github.com/${user}/${id}
-[React App Rewire pHTML]: https://github.com/phtmlorg/react-app-rewire-phtml
-[React App Rewired]: https://github.com/timarney/react-app-rewired

@@ -1,5 +1,13 @@
 # Changes to Create pHTML Plugin
 
+### 3.3.0 (May 6, 2019)
+
+- Added: Install instructions for `phtml-11ty`, `gulp-phtml`, and `grunt-phtml`
+
+### 3.2.0 (May 3, 2019)
+
+- Updated: `phtml` to 3.3.1 (minor)
+
 ### 3.1.0 (April 19, 2019)
 
 - Updated: `pthml` to 3.1.0 (minor)

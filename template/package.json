@@ -29,22 +29,32 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "phtml": "^3.1.0"
+    "phtml": "^3.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
-    "eslint-config-dev": "^2.0.0",
     "phtml-tape": "^3.0.0",
     "pre-commit": "^1.2.2",
-    "rollup": "^1.10.0",
+    "rollup": "^1.11.3",
     "rollup-plugin-babel": "^4.3.2"
   },
   "eslintConfig": {
-    "extends": "dev",
-    "parser": "babel-eslint"
+    "root": true,
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "impliedStrict": true,
+      "sourceType": "module"
+    },
+    "extends": "eslint:recommended"
   },
   "keywords": [
     "${keywords}"
