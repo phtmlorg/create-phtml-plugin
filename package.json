@@ -1,6 +1,6 @@
 {
   "name": "create-phtml-plugin",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "description": "Quickly create new pHTML plugins",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "license": "CC0-1.0",
@@ -22,7 +22,7 @@
     "test": "npm run lint"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

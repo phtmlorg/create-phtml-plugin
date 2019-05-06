@@ -1,5 +1,5 @@
 module.exports = {
-	'basic': {
-		message: 'supports basic usage'
-	}
+  'basic': {
+    message: 'supports basic usage'
+  }
 };
