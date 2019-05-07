@@ -1,5 +1,9 @@
 # Changes to Create pHTML Plugin
 
+### 4.1.0 (May 7, 2019)
+
+- Added: Install instructions for `phtml-loader`
+
 ### 4.0.1 (May 6, 2019)
 
 - Fixed: Node 8+ compatibility in `.travis.yml`

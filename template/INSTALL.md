@@ -2,8 +2,8 @@
 
 [${title}] runs in all Node environments, with special instructions for:
 
-| [Node](#node) | [CLI](#phtml-cli) | [Eleventy](#eleventy) | [Gulp](#gulp) | [Grunt](#grunt) |
-| --- | --- | --- | --- | --- |
+| [Node](#node) | [CLI](#phtml-cli) | [Eleventy](#eleventy) | [Webpack](#webpack) | [Gulp](#gulp) | [Grunt](#grunt) |
+| --- | --- | --- | --- | --- | --- |
 
 ## Node
 
@@ -73,6 +73,41 @@ module.exports = function (eleventyConfig) {
 }
 ```
 
+## Webpack
+
+Add [pHTML Loader] to your project:
+
+```bash
+npm install phtml-loader --save-dev
+```
+
+## Usage
+
+Use [pHTML Loader] and [${title}] in your Webpack configuration:
+
+```js
+const ${idCamelCase} = require('${npmId}')
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'phtml-loader', { options: {
+              plugins: [
+                ${idCamelCase}(/* pluginOptions */)
+              ]
+            } }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
 ## Gulp
 
 Add [Gulp pHTML] and [${title}] to your project:
@@ -138,4 +173,5 @@ grunt.initConfig({
 [Grunt pHTML]: https://github.com/phtmlorg/grunt-phtml
 [pHTML]: https://github.com/phtmlorg/phtml
 [pHTML Eleventy]: https://github.com/phtmlorg/phtml-11ty
+[pHTML Loader]: https://github.com/phtmlorg/phtml-loader
 [${title}]: https://github.com/${user}/${id}

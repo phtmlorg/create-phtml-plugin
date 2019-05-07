@@ -1,6 +1,6 @@
 {
   "name": "create-phtml-plugin",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Quickly create new pHTML plugins",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "license": "CC0-1.0",
