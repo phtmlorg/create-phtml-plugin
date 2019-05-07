@@ -175,7 +175,7 @@ fse.copyFile = (source, target) => fse.touchFile(target).then(
 			// copy stream
 			readStream.pipe(writeStream);
 
-			function prereject(err) {
+			function prereject (err) {
 				// destroy streams
 				readStream.destroy();
 				writeStream.end();

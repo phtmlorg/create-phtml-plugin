@@ -3,6 +3,7 @@
 ### 4.1.0 (May 7, 2019)
 
 - Added: Install instructions for `phtml-loader`
+- Fixed: Issue with `.gitignore` being copied as `.npmignore`
 
 ### 4.0.1 (May 6, 2019)
 
