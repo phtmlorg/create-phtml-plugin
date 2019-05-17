@@ -1,5 +1,11 @@
 # Changes to Create pHTML Plugin
 
+### 4.2.0 (May 16, 2019)
+
+- Updated: `phtml` to 4.1.0 (minor)
+- Updated: `phtml-tape` to 4.1.0 (minor)
+- Updated: `rollup` to 1.12.1 (minor)
+
 ### 4.1.0 (May 7, 2019)
 
 - Added: Install instructions for `phtml-loader`

@@ -32,5 +32,5 @@ function patchNpmIgnore (pathname) {
 	return pathname === '.npmignore' ? '.gitignore' : pathname;
 }
 
-const keys = /\$\{([^\}]+)\}/g;
+const keys = /\$\{([^}]+)\}/g;
 const patchPkg = ',\n    ".*",\n    "*"';

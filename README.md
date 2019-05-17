@@ -1,5 +1,9 @@
 # create-phtml-plugin [<img src="https://phtml.io/logo.svg" alt="pHTML" width="90" height="90" align="right">][pHTML]
 
+[![NPM Version][npm-img]][npm-url]
+[![Build Status][cli-img]][cli-url]
+[![Gitter Chat][git-img]][git-url]
+
 [Create pHTML Plugin] lets you quickly create new [pHTML] plugins with
 documentation, tests, and built in compiling for supported Node environments.
 
@@ -103,6 +107,13 @@ dependencies.
 ```sh
 npm init phtml-plugin --no-install
 ```
+
+[cli-img]: https://img.shields.io/travis/phtmlorg/create-phtml-plugin.svg
+[cli-url]: https://travis-ci.org/phtmlorg/create-phtml-plugin
+[git-img]: https://img.shields.io/badge/support-chat-blue.svg
+[git-url]: https://gitter.im/phtmlorg/phtml
+[npm-img]: https://img.shields.io/npm/v/create-phtml-plugin.svg
+[npm-url]: https://www.npmjs.com/package/create-phtml-plugin
 
 [Create pHTML Plugin]: https://github.com/phtmlorg/create-phtml-plugin
 [pHTML]: https://github.com/phtmlorg/phtml
